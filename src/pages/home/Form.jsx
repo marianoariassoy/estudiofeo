@@ -64,15 +64,15 @@ const Form = () => {
       ) : (
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
-            <input {...register("name", { required: true })} className="w-full h-11 p-3 text-black border-2 border-black" placeholder={text["es"].name} />
+            <input {...register("name", { required: true })} className="w-full h-11 p-3 text-black bg-transparent border-2 border-black" placeholder={text["es"].name} />
             {errors.name && <Error />}
           </div>
           <div className="mb-4">
-            <input {...register("email", { required: true })} className="w-full h-11 p-3 text-black border-2 border-black" placeholder={text["es"].email} />
+            <input {...register("email", { required: true })} className="w-full h-11 p-3 text-black bg-transparent border-2 border-black" placeholder={text["es"].email} />
             {errors.email && <Error />}
           </div>
           <div className="mb-4">
-            <textarea cols="30" rows="5" {...register("message", { required: true })} className="w-full p-3 text-black border-2 border-black" placeholder={text["es"].message} />
+            <textarea cols="30" rows="5" {...register("message", { required: true })} className="w-full p-3 text-black bg-transparent border-2 border-black" placeholder={text["es"].message} />
             {errors.message && <Error />}
           </div>
           <div>{sending ? <BeatLoader /> : <button className="bg-black w-full text-white h-11 font-bold btn">{text["es"].send}</button>}</div>

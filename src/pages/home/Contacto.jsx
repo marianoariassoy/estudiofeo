@@ -3,7 +3,7 @@ import whatsapp from "../../assets/images/whatsapp.svg";
 
 const Contacto = () => {
   return (
-    <section className="px-16 py-20 lg:flex justify-between items-end" id="contacto">
+    <section className="px-16 py-20 lg:flex justify-between items-end bg-secondary" id="contacto">
       <div>
         <h2 className="font-extrabold mb-6">¡HABLEMOS!</h2>
         <p className="text-xl">

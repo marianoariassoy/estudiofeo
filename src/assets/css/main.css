@@ -55,6 +55,10 @@ a {
   font-style: italic;
 }
 
+.bg-secondary {
+  background-color: #f7f7f7;
+}
+
 .logo img {
   height: 28px;
 }
@@ -148,7 +152,7 @@ a {
 }
 .btn:hover {
   color: black;
-  background-color: white;
+  background-color: transparent;
   border: 2px solid black;
 }
 
@@ -156,4 +160,52 @@ a {
   .text-6xl {
     font-size: 3rem;
   }
+}
+
+.creaciones-container {
+  max-width: 1400px;
+}
+
+.item-mask {
+  height: 280px;
+}
+
+.mask {
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.mask-1 {
+  -webkit-mask-image: url("./assets/mask/mask-1-on.svg");
+          mask-image: url("./assets/mask/mask-1-on.svg");
+}
+
+.mask-2 {
+  -webkit-mask-image: url("./assets/mask/mask-2-on.svg");
+          mask-image: url("./assets/mask/mask-2-on.svg");
+}
+
+.mask-3 {
+  -webkit-mask-image: url("./assets/mask/mask-3-on.svg");
+          mask-image: url("./assets/mask/mask-3-on.svg");
+}
+
+.mask-4 {
+  -webkit-mask-image: url("./assets/mask/mask-4-on.svg");
+          mask-image: url("./assets/mask/mask-4-on.svg");
+}
+
+.mask-5 {
+  -webkit-mask-image: url("./assets/mask/mask-5-on.svg");
+          mask-image: url("./assets/mask/mask-5-on.svg");
+}
+
+.mask-6 {
+  -webkit-mask-image: url("./assets/mask/mask-6-on.svg");
+          mask-image: url("./assets/mask/mask-6-on.svg");
 }/*# sourceMappingURL=main.css.map */

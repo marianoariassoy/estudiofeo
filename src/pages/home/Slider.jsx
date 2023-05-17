@@ -70,7 +70,7 @@ const Slider = () => {
   };
 
   return (
-    <section className="mt-44">
+    <section className="mt-44 bg-secondary">
       <Slide {...properties}>
         {data.map((item) => (
           <SliderItem key={item.id} src={item.image} date={item.date} title={item.title} />

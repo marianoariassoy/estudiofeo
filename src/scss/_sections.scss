@@ -22,7 +22,7 @@
 .btn {
   &:hover {
     color: black;
-    background-color: white;
+    background-color: transparent;
     border: 2px solid black;
   }
 }
@@ -31,4 +31,36 @@
   @media (max-width: 980px) {
     font-size: 3rem;
   }
+}
+
+.creaciones-container {
+  max-width: 1400px;
+}
+.item-mask {
+  height: 280px;
+}
+.mask {
+  mask-size: contain;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  overflow: hidden;
+}
+.mask-1 {
+  mask-image: url("./assets/mask/mask-1-on.svg");
+}
+.mask-2 {
+  mask-image: url("./assets/mask/mask-2-on.svg");
+}
+.mask-3 {
+  mask-image: url("./assets/mask/mask-3-on.svg");
+}
+.mask-4 {
+  mask-image: url("./assets/mask/mask-4-on.svg");
+}
+.mask-5 {
+  mask-image: url("./assets/mask/mask-5-on.svg");
+}
+.mask-6 {
+  mask-image: url("./assets/mask/mask-6-on.svg");
 }
