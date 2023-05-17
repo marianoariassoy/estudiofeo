@@ -1,12 +1,13 @@
-<svg id="uuid-ac0bf3d8-005c-4c4a-921c-c24b58adf903" xmlns="http://www.w3.org/2000/svg" width="237.7" height="410.5" viewBox="0 0 237.7 410.5">
-  <g id="uuid-748ffd77-6b89-4102-a603-87aaa43d0e6d" data-name="Capa 1">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-9220d665-9355-4d9e-97c1-1364e886d7de" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="177" height="317" viewBox="0 0 177 317">
+  <g id="uuid-8597aec2-9f3c-4e09-bd0e-e7b5a20f3011" data-name="Capa 1">
     <g>
-      <path d="M236.7,409.5H1V118.8c0-65.1,52.8-117.8,117.8-117.8h0c65.1,0,117.8,52.8,117.8,117.8V409.5Z" style="fill: #f7f7f7;"/>
+      <path d="M176.5,316.5H.5V88.5c0-48.6,39.4-88,88-88h0c48.6,0,88,39.4,88,88v228Z" style="fill: #f7f7f7;"/>
       <g>
-        <polyline points="236.7 397 236.7 409.5 224.2 409.5" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 1px;"/>
-        <line x1="216" y1="409.5" x2="17.6" y2="409.5" style="fill: none; stroke: #000; stroke-dasharray: 0 0 25.6 8.2; stroke-miterlimit: 10; stroke-width: 1px;"/>
-        <polyline points="13.5 409.5 1 409.5 1 397" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 1px;"/>
-        <path d="M1,389V118.8C1,53.8,53.8,1,118.8,1h0c65.1,0,117.8,52.8,117.8,117.8V393" style="fill: none; stroke: #000; stroke-dasharray: 0 0 24.9 8; stroke-miterlimit: 10; stroke-width: 1px;"/>
+        <polyline points="176.5 304 176.5 316.5 164 316.5" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <line x1="155.4" y1="316.5" x2="17.3" y2="316.5" style="fill: none; stroke: #000; stroke-dasharray: 0 0 27 8.6; stroke-miterlimit: 10;"/>
+        <polyline points="13 316.5 .5 316.5 .5 304" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+        <path d="M.5,295.9V88.5C.5,39.9,39.9,.5,88.5,.5h0c48.6,0,88,39.4,88,88v211.5" style="fill: none; stroke: #000; stroke-dasharray: 0 0 25.2 8.1; stroke-miterlimit: 10;"/>
       </g>
     </g>
   </g>

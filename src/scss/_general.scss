@@ -47,6 +47,17 @@ a {
   font-style: italic;
 }
 
+.text-secondary {
+  color: #c6b5d2;
+}
 .bg-secondary {
   background-color: #f7f7f7;
+}
+.bg-white {
+  background-color: white !important;
+}
+
+.text-outline {
+  color: #f7f7f7;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }

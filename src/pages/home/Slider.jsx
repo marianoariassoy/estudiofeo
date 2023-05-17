@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import Loader from "../../components/Loader";
+import GsapHeader from "../../utils/GsapHeader";
 
 const SliderItem = ({ src, date, title }) => {
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    GsapHeader();
+  }, []);
 
   useEffect(() => {
     const image = new Image();
@@ -70,7 +75,7 @@ const Slider = () => {
   };
 
   return (
-    <section className="mt-44 bg-secondary">
+    <section className="mt-44 bg-secondary data-light-header">
       <Slide {...properties}>
         {data.map((item) => (
           <SliderItem key={item.id} src={item.image} date={item.date} title={item.title} />

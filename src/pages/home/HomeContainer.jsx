@@ -9,23 +9,26 @@ import Muebles from "./Muebles";
 import Objetos from "./Objetos";
 import Slider from "./Slider";
 import Tienda from "./Tienda";
-import Contacto from "./Contacto";
+import Contacto from "../contacto/Contacto";
 
 const HomeContainer = () => {
   return (
     <>
-      <NavBar />
-      <Slider />
-      <Creaciones />
-      <Tienda />
-      <Galeria />
-      <Espacios />
-      <Arte />
-      <Objetos />
-      <Muebles />
-      <Efimeros />
-      <Alianzas />
-      <Contacto />
+      <header className="fixed w-full top-0 z-40">
+        <NavBar />
+      </header>
+      <main>
+        <Slider />
+        <Creaciones />
+        <Tienda />
+        <Galeria />
+        <Espacios />
+        <Arte />
+        <Objetos />
+        <Muebles />
+        <Efimeros />
+        <Alianzas />
+      </main>
     </>
   );
 };

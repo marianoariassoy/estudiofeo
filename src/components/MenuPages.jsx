@@ -1,26 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Menu = () => {
+const MenuPages = () => {
   const menuItems = [
     {
       id: 1,
       name: "ESTUDIO",
-      url: "#estudio",
+      url: "/",
     },
     {
       id: 2,
       name: "CREACIONES",
-      url: "#creaciones",
+      url: "/#creaciones",
     },
     {
       id: 3,
       name: "TIENDA",
-      url: "#tienda",
+      url: "/",
     },
     {
       id: 4,
       name: "GALERIA",
-      url: "#galeria",
+      url: "/",
     },
   ];
 
@@ -30,15 +30,15 @@ const Menu = () => {
         <ul className="text-5xl lg:text-7xl font-extra">
           {menuItems.map((item) => (
             <li key={item.id}>
-              <a href={item.url} className="menu-link scroll">
+              <Link to={item.url} className="menu-link">
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
           <li>
-            <NavLink to="/contacto" className="menu-link">
+            <Link to="/contacto" className="menu-link">
               Contacto
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -46,4 +46,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default MenuPages;

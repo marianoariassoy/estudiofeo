@@ -55,8 +55,21 @@ a {
   font-style: italic;
 }
 
+.text-secondary {
+  color: #c6b5d2;
+}
+
 .bg-secondary {
   background-color: #f7f7f7;
+}
+
+.bg-white {
+  background-color: white !important;
+}
+
+.text-outline {
+  color: #f7f7f7;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .logo img {
@@ -74,7 +87,6 @@ a {
 
 .menu-link {
   color: white;
-  background-color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .menu-link:hover {
@@ -82,6 +94,10 @@ a {
 }
 
 .nav-active {
+  color: black;
+}
+
+.active {
   color: black;
 }
 
@@ -117,7 +133,6 @@ a {
 
 #nav-menu.active > span:nth-child(1),
 #nav-menu.active > span:nth-child(3) {
-  background-color: #000000;
   transition-delay: 0.4s;
 }
 
@@ -126,7 +141,6 @@ a {
 }
 
 #nav-menu.active > span:nth-child(3) {
-  background-color: #000000;
   transform: translateY(-9px) rotate(90deg);
 }
 
@@ -162,22 +176,31 @@ a {
   }
 }
 
-.creaciones-container {
-  max-width: 1400px;
-}
-
 .item-mask {
-  height: 280px;
+  cursor: pointer;
+  white-space: normal;
+  width: 180px;
+  height: 317px;
+  margin-right: 1.5rem;
+}
+.item-mask:hover .item-mask-main {
+  opacity: 0;
+}
+.item-mask:hover .item-mask-image {
+  opacity: 1;
+}
+.item-mask:hover .item-mask-outline {
+  opacity: 1;
 }
 
 .mask {
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  -webkit-mask-position: center;
-          mask-position: center;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  overflow: hidden;
+          mask-repeat: no-repeat;
+  height: 322px;
+  -webkit-mask-position: top;
+          mask-position: top;
 }
 
 .mask-1 {
@@ -208,4 +231,22 @@ a {
 .mask-6 {
   -webkit-mask-image: url("./assets/mask/mask-6-on.svg");
           mask-image: url("./assets/mask/mask-6-on.svg");
+}
+
+.galeria-item {
+  height: 70vh;
+}
+@media (max-width: 980px) {
+  .galeria-item {
+    height: auto;
+  }
+}
+
+.items-container-main {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.items-container-main .items-container {
+  display: inline-block;
 }/*# sourceMappingURL=main.css.map */
