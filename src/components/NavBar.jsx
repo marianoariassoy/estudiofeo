@@ -24,15 +24,10 @@ const NavBar = () => {
       a.addEventListener("click", (e) => {
         e.preventDefault();
         gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
+        document.querySelector(".nav").classList.remove("active");
+        document.querySelector("#nav-menu").classList.remove("active");
       });
     });
-
-    function setActive(link) {
-      links.forEach((el) => {
-        el.classList.remove("nav-active");
-      });
-      link.classList.add("nav-active");
-    }
   }, []);
 
   const OpenMenu = () => {
