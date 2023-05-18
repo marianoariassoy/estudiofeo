@@ -249,4 +249,11 @@ a {
 }
 .items-container-main .items-container {
   display: inline-block;
+}
+
+@media (max-width: 980px) {
+  .px-16 {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
+  }
 }/*# sourceMappingURL=main.css.map */

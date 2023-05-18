@@ -7,7 +7,7 @@ const Contacto = () => {
     <>
       <Header />
 
-      <main className="absolute bottom-0 w-full">
+      <main className="absolute bottom-0 w-full pt-2">
         <section className="px-16 py-20 lg:flex justify-between items-end" id="contacto">
           <div>
             <h2 className="font-extrabold mb-6">¡HABLEMOS!</h2>
