@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const Item = ({ data, mask }) => {
   return (
-    <div className="item-mask items-center justify-center relative inline-flex">
+    <Link to="/post/10" className="item-mask items-center justify-center relative inline-flex">
       {mask === "1" ? (
         <div className="absolute left-0 w-full z-30 px-8">
           <h2 className="font-bold text-xl mb-4 text-outline">{data.number}</h2>
@@ -17,7 +19,7 @@ const Item = ({ data, mask }) => {
       <img src={`/assets/mask/mask-${mask}.svg`} className="item-mask-main absolute z-20 w-full top-0" />
       <img src={`/assets/mask/mask-${mask}-outline.svg`} className="item-mask-outline absolute z-10 w-full opacity-0 top-0" />
       <img src={data.image} className={`item-mask-image absolute top-0 h-full w-full object-cover mask mask-${mask} opacity-0`} />
-    </div>
+    </Link>
   );
 };
 

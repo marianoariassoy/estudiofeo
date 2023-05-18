@@ -46,10 +46,10 @@ const NavBar = () => {
       <div className="w-full flex justify-between items-center px-16 py-20 ">
         <div className="logo">
           <a href="#slider" className="scroll">
-            <img src="./assets/images/logo.svg" alt="logo" />
+            <img src="./assets/images/logo.svg" alt="logo" className="logo-main" />
           </a>
         </div>
-        <div id="nav-menu" onClick={OpenMenu}>
+        <div id="nav-menu" className="menu-main" onClick={OpenMenu}>
           <span></span>
           <span></span>
           <span></span>
