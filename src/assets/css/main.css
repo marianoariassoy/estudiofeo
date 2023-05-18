@@ -204,33 +204,33 @@ a {
 }
 
 .mask-1 {
-  -webkit-mask-image: url("./assets/mask/mask-1-on.svg");
-          mask-image: url("./assets/mask/mask-1-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-1-on.svg");
+          mask-image: url("/assets/mask/mask-1-on.svg");
 }
 
 .mask-2 {
-  -webkit-mask-image: url("./assets/mask/mask-2-on.svg");
-          mask-image: url("./assets/mask/mask-2-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-2-on.svg");
+          mask-image: url("/assets/mask/mask-2-on.svg");
 }
 
 .mask-3 {
-  -webkit-mask-image: url("./assets/mask/mask-3-on.svg");
-          mask-image: url("./assets/mask/mask-3-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-3-on.svg");
+          mask-image: url("/assets/mask/mask-3-on.svg");
 }
 
 .mask-4 {
-  -webkit-mask-image: url("./assets/mask/mask-4-on.svg");
-          mask-image: url("./assets/mask/mask-4-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-4-on.svg");
+          mask-image: url("/assets/mask/mask-4-on.svg");
 }
 
 .mask-5 {
-  -webkit-mask-image: url("./assets/mask/mask-5-on.svg");
-          mask-image: url("./assets/mask/mask-5-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-5-on.svg");
+          mask-image: url("/assets/mask/mask-5-on.svg");
 }
 
 .mask-6 {
-  -webkit-mask-image: url("./assets/mask/mask-6-on.svg");
-          mask-image: url("./assets/mask/mask-6-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-6-on.svg");
+          mask-image: url("/assets/mask/mask-6-on.svg");
 }
 
 .galeria-item {
