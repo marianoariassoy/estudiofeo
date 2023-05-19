@@ -3,7 +3,7 @@ import ImageComponent from "../../components/ImageComponent";
 const Galeria = () => {
   return (
     <>
-      <section className="px-16 py-20 pb-10 bg-secondary" id="galeria">
+      <section className="px-16 pt-28 pb-10 bg-secondary" id="galeria">
         <div className="flex justify-between items-center">
           <div>
             <h1 className="font-bold text-6xl">

@@ -65,7 +65,7 @@ const Efimeros = () => {
   ];
 
   return (
-    <section className="px-16 py-20 bg-secondary" id="efimeros">
+    <section className="px-16 py-28 bg-secondary" id="efimeros">
       <div className="mb-20">
         <h1 className="font-bold text-6xl">
           efímeros <span className="font-extraitalic">&feos</span>

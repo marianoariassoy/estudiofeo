@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 const Menu = () => {
   const menuItems = [
     {
@@ -22,6 +20,11 @@ const Menu = () => {
       name: "GALERIA",
       url: "#galeria",
     },
+    {
+      id: 5,
+      name: "CONTACTO",
+      url: "#contacto",
+    },
   ];
 
   return (
@@ -35,11 +38,6 @@ const Menu = () => {
               </a>
             </li>
           ))}
-          <li>
-            <NavLink to="/contacto" className="menu-link">
-              Contacto
-            </NavLink>
-          </li>
         </ul>
       </nav>
     </div>

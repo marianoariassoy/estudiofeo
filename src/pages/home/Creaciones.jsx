@@ -42,7 +42,7 @@ const Creaciones = () => {
   ];
 
   return (
-    <section className="px-16 pt-20 bg-secondary" id="creaciones">
+    <section className="px-16 pt-28 bg-secondary" id="creaciones">
       <div className="flex justify-between items-center mb-20">
         <div>
           <h1 className="font-bold text-6xl">
@@ -54,7 +54,7 @@ const Creaciones = () => {
         </div>
       </div>
 
-      <div className="items-container-main pb-12">
+      <div className="items-container-main pb-14">
         <div className="items-container">
           {data.map((item) => (
             <Item key={item.id} data={item} mask={item.id} />

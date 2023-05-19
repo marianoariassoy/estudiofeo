@@ -56,7 +56,7 @@ const Tienda = () => {
 
   return (
     <>
-      <section className="px-16 py-20 pb-10 bg-secondary" id="tienda">
+      <section className="px-16 pt-20 pb-10 bg-secondary" id="tienda">
         <div className="flex justify-between items-center mb-10">
           <div>
             <h1 className="font-bold text-6xl">

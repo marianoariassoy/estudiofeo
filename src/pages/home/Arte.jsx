@@ -65,7 +65,7 @@ const Arte = () => {
   ];
 
   return (
-    <section className="px-16 pt-20 bg-secondary" id="arte">
+    <section className="px-16 pt-28 bg-secondary" id="arte">
       <div className="mb-20">
         <h1 className="font-bold text-6xl">
           arte <span className="font-extraitalic">feo</span>

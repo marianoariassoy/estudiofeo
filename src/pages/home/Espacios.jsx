@@ -47,7 +47,7 @@ const Espacios = () => {
   ];
 
   return (
-    <section className="px-16 pt-20 bg-secondary" id="espacios">
+    <section className="px-16 pt-28 bg-secondary" id="espacios">
       <div className="mb-20">
         <h1 className="font-bold text-6xl">
           espacios <span className="font-extraitalic">feos</span>

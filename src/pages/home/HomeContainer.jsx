@@ -9,7 +9,7 @@ import Muebles from "./Muebles";
 import Objetos from "./Objetos";
 import Slider from "./Slider";
 import Tienda from "./Tienda";
-import Contacto from "../contacto/Contacto";
+import Contacto from "./Contacto";
 
 const HomeContainer = () => {
   return (
@@ -28,6 +28,7 @@ const HomeContainer = () => {
         <Muebles />
         <Efimeros />
         <Alianzas />
+        <Contacto />
       </main>
     </>
   );

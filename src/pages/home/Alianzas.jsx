@@ -65,7 +65,7 @@ const Alianzas = () => {
   ];
 
   return (
-    <section className="px-16 p-20 bg-secondary" id="alianzas">
+    <section className="px-16 p-28 bg-secondary" id="alianzas">
       <div className="mb-20">
         <h1 className="font-bold text-6xl">
           alianzas <span className="font-extraitalic">feas</span>
