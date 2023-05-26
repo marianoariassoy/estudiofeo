@@ -10,6 +10,7 @@ import Objetos from "./Objetos";
 import Slider from "./Slider";
 import Tienda from "./Tienda";
 import Contacto from "./Contacto";
+import Estudio from "./Estudio";
 
 const HomeContainer = () => {
   return (
@@ -19,6 +20,7 @@ const HomeContainer = () => {
       </header>
       <main>
         <Slider />
+        <Estudio />
         <Creaciones />
         <Tienda />
         <Galeria />

@@ -45,18 +45,17 @@
 
 @font-face {
   font-display: swap;
-  font-family: "Brodaers Expanded Round";
-  font-style: normal;
-  font-weight: normal;
-  src: url("BrodaersExpanded-Round.eot");
-  src: url("BrodaersExpanded-Round.eot?#iefix") format("embedded-opentype"), url("BrodaersExpanded-Round.woff2") format("woff2"), url("BrodaersExpanded-Round.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
   font-family: "Bodoni Moda";
   font-style: italic;
   font-weight: 500;
   src: url("BodoniModa28pt-MediumItalic.eot");
   src: url("BodoniModa28pt-MediumItalic.eot?#iefix") format("embedded-opentype"), url("BodoniModa28pt-MediumItalic.woff2") format("woff2"), url("BodoniModa28pt-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Brodaers Expanded Round";
+  font-style: normal;
+  font-weight: normal;
+  src: url("MBFDanomo.woff2") format("woff2"), url("MBFDanomo.woff") format("woff"), url("MBFDanomo.ttf") format("truetype");
 }

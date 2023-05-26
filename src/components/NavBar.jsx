@@ -49,6 +49,7 @@ const NavBar = () => {
             <img src="./assets/images/logo.svg" alt="logo" className="logo-main" />
           </a>
         </div>
+
         <div id="nav-menu" className="menu-main" onClick={OpenMenu}>
           <span></span>
           <span></span>

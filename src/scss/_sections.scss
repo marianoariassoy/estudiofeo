@@ -98,3 +98,16 @@
     padding-left: 2.5rem !important;
   }
 }
+
+.post-col-left {
+  width: 350px;
+  @media (max-width: 980px) {
+    width: 100%;
+  }
+}
+.post-col-right {
+  width: calc(100vw - 350px);
+  @media (max-width: 980px) {
+    width: 100%;
+  }
+}
