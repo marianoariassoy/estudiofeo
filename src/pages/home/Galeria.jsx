@@ -27,7 +27,7 @@ const Galeria = () => {
             </h1>
           </div>
           <div>
-            <button className="border-2 border-black rounded-full px-4 py-1 font-bold hover:opacity-60"> {lan === "es" ? "VER EXPOSICIONES ANTERIORES" : "VIEW PREV EXPOSITIONS"}</button>
+            <button className="border-2 border-black rounded-full px-4 py-1 font-bold hover:opacity-60"> {lan === "es" ? " EXPOSICIONES ANTERIORES" : "PREV EXPOSITIONS"}</button>
           </div>
         </div>
       </section>

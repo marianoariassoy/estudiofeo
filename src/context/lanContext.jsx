@@ -3,7 +3,7 @@ import { useState, createContext, useContext } from "react";
 export const LanContext = createContext(null);
 
 export const LanProvider = ({ children }) => {
-  const [lan, setLan] = useState("en");
+  const [lan, setLan] = useState("es");
   const imageURL = "https://estudiofeo.com/backend/images/";
 
   return <LanContext.Provider value={{ lan, setLan, imageURL }}>{children}</LanContext.Provider>;
