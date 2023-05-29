@@ -15,7 +15,9 @@ const Tienda = () => {
             {lan === "es" ? "tienda" : "shop"} <span className="font-extraitalic">feo</span>
           </h1>
         </div>
-        <div className="text-xl mb-10">Descubrí nuestro catálogo y agendá una cita para un asesoramiento personalizado en nuestro showroom.</div>
+        <div className="text-xl mb-10">
+          {lan === "es" ? "Descubrí nuestro catálogo y agendá una cita para un asesoramiento personalizado en nuestro showroom." : "Discover our catalog and schedule an appointment for personalized advice in our showroom."}
+        </div>
       </section>
 
       <section className="px-16 grid grid-cols-1 lg:grid-cols-4 2xl:grid-cols-5 gap-4 bg-secondary">{loading ? <Loader /> : data.map((item) => <TiendaItem key={item.id} data={item} />)}</section>

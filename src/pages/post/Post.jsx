@@ -72,18 +72,26 @@ const Post = () => {
               <h1 className="text-4xl font-bold leading-10">{data[0].title}</h1>
             </div>
 
+            {data[0].link && (
+              <div className="mb-4">
+                <a href={data[0].link} target="_blank" rel="noreferrer" className="border border-black rounded-full px-4 py-1 font-bold inline-flex  gap-2 items-center hover:opacity-60 mb-2">
+                  {lan === "es" ? "Ir al link" : "View Link"}
+                </a>
+              </div>
+            )}
+
             <div>
               {data[0].prev && (
-                <button className="border border-black rounded-full px-4 py-1 font-bold flex gap-2 items-center hover:opacity-60 mb-4">
+                <Link to={`/post/${data[0].prev}`} className="border border-black rounded-full px-4 py-1 font-bold inline-flex gap-2 items-center hover:opacity-60 mb-4 ">
                   <img src={iconBack} style={{ height: "16px" }} />
-                  Anterior
-                </button>
+                  {lan === "es" ? "Anterior" : "Previous"}
+                </Link>
               )}
               {data[0].next && (
-                <button className="border border-black rounded-full px-4 py-1 font-bold flex gap-2 items-center hover:opacity-60 mb-2">
-                  Siguiente
+                <Link to={`/post/${data[0].next}`} className="border border-black rounded-full px-4 py-1 font-bold inline-flex gap-2 items-center hover:opacity-60 mb-2">
+                  {lan === "es" ? "Siguiente" : "Next"}
                   <img src={iconForward} style={{ height: "16px" }} />
-                </button>
+                </Link>
               )}
             </div>
           </div>
