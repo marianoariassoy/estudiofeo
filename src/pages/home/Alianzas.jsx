@@ -1,15 +1,21 @@
+import { useEffect } from "react";
 import Item from "./Item";
 import { useDataContext } from "../../context/lanContext";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
+import GsapLogo from "../../utils/GsapLogo";
 
 const Alianzas = () => {
   const { lan } = useDataContext();
   const { data, loading } = useFetch(`/alianzas/${lan}`);
 
+  useEffect(() => {
+    GsapLogo(".data-hidden-alianzas");
+  }, []);
+
   return (
     <section className="px-16 p-28 bg-secondary" id="alianzas">
-      <div className="mb-20">
+      <div className="data-hidden-alianzas mb-20">
         <h1 className="font-bold text-6xl">
           {lan === "es" ? "alianzas" : "aliances"} <span className="font-extraitalic">feas</span>
         </h1>

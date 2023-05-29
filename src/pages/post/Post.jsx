@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useDataContext } from "../../context/lanContext";
+import { Helmet } from "react-helmet";
 
+import { useDataContext } from "../../context/lanContext";
 import Header from "../../components/Header";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
 import TextHTML from "../../hooks/useHTML";
-
+import Modal from "../../components/Modal";
 import iconBack from "../../assets/images/back.svg";
 import iconVideo from "../../assets/images/play.svg";
 import iconForward from "../../assets/images/forward.svg";
 import ImageComponent from "../../components/ImageComponent";
-import Modal from "../../components/Modal";
 
 const Post = () => {
   useEffect(() => {
@@ -40,6 +40,15 @@ const Post = () => {
 
   return (
     <>
+      <Helmet>
+        <title>FEO &bull; {data[0].title}</title>
+        <meta name="description" content={data[0].text} />
+        <meta property="og:title" content={data[0].title} />
+        <meta property="og:url" content={`https://estudiofeo.com/post/${data[0].id}`} />
+        <meta property="og:image" content={`https://estudiofeo.com/backend/images/${data[0].image}`} />
+        <meta property="og:image:alt" content="Estudio Feo" />
+      </Helmet>
+
       <Header />
       <main className="lg:flex">
         <section className="lg:fixed post-col-left px-16 pt-48 pb-12 relative z-30 bg-white">
@@ -99,8 +108,15 @@ const Post = () => {
 
         <section className="lg:absolute right-0 post-col-right">
           {dataImages[0] && (
-            <div className="aspect-video object-cover">
-              <ImageComponent src={dataImages[0].image} alt={data[0].title} />
+            <div>
+              <div className="aspect-video object-cover">
+                <ImageComponent src={dataImages[0].image} alt={data[0].title} />
+              </div>
+              {dataImages[0].text && (
+                <div className="px-20 pt-10">
+                  <TextHTML text={lan === "es" ? dataImages[0].text : dataImages[0].text_eng} />
+                </div>
+              )}
             </div>
           )}
 
@@ -111,20 +127,41 @@ const Post = () => {
           )}
 
           {dataImages[1] && (
-            <div className="aspect-video object-cover">
-              <ImageComponent src={dataImages[1].image} alt={data[0].title} />
+            <div>
+              <div className="aspect-video object-cover">
+                <ImageComponent src={dataImages[1].image} alt={data[0].title} />
+              </div>
+              {dataImages[1].text && (
+                <div className="px-20 py-20">
+                  <TextHTML text={lan === "es" ? dataImages[1].text : dataImages[1].text_eng} />
+                </div>
+              )}
             </div>
           )}
 
           <div className="grid grid-cols-2">
             {dataImages[2] && (
-              <div className="aspect-square object-cover">
-                <ImageComponent src={dataImages[2].image} alt={data[0].title} />
+              <div>
+                <div className="aspect-square object-cover">
+                  <ImageComponent src={dataImages[2].image} alt={data[0].title} />
+                </div>
+                {dataImages[2].text && (
+                  <div className="px-20 py-10">
+                    <TextHTML text={lan === "es" ? dataImages[2].text : dataImages[2].text_eng} />
+                  </div>
+                )}
               </div>
             )}
             {dataImages[3] && (
-              <div className="aspect-square object-cover">
-                <ImageComponent src={dataImages[3].image} alt={data[0].title} />
+              <div>
+                <div className="aspect-square object-cover">
+                  <ImageComponent src={dataImages[3].image} alt={data[0].title} />
+                </div>
+                {dataImages[3].text && (
+                  <div className="px-20 py-10">
+                    <TextHTML text={lan === "es" ? dataImages[3].text : dataImages[3].text_eng} />
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -137,23 +174,51 @@ const Post = () => {
 
           <div className="grid grid-cols-2">
             {dataImages[4] && (
-              <div className="aspect-square object-cover">
-                <ImageComponent src={dataImages[4].image} alt={data[0].title} />
+              <div>
+                <div className="aspect-square object-cover">
+                  <ImageComponent src={dataImages[4].image} alt={data[0].title} />
+                </div>
+                {dataImages[4].text && (
+                  <div className="px-20 py-10">
+                    <TextHTML text={lan === "es" ? dataImages[4].text : dataImages[4].text_eng} />
+                  </div>
+                )}
               </div>
             )}
             {dataImages[5] && (
-              <div className="aspect-square object-cover">
-                <ImageComponent src={dataImages[5].image} alt={data[0].title} />
+              <div>
+                <div className="aspect-square object-cover">
+                  <ImageComponent src={dataImages[5].image} alt={data[0].title} />
+                </div>
+                {dataImages[5].text && (
+                  <div className="px-20 py-10">
+                    <TextHTML text={lan === "es" ? dataImages[5].text : dataImages[5].text_eng} />
+                  </div>
+                )}
               </div>
             )}
             {dataImages[6] && (
-              <div className="aspect-square object-cover">
-                <ImageComponent src={dataImages[6].image} alt={data[0].title} />
+              <div>
+                <div className="aspect-square object-cover">
+                  <ImageComponent src={dataImages[6].image} alt={data[0].title} />
+                </div>
+                {dataImages[6].text && (
+                  <div className="px-20 py-10">
+                    <TextHTML text={lan === "es" ? dataImages[6].text : dataImages[6].text_eng} />
+                  </div>
+                )}
               </div>
             )}
             {dataImages[7] && (
-              <div className="aspect-square object-cover">
-                <ImageComponent src={dataImages[7].image} alt={data[0].title} />
+              <div>
+                <div className="aspect-square object-cover">
+                  <ImageComponent src={dataImages[7].image} alt={data[0].title} />
+                </div>
+                {dataImages[7].text && (
+                  <div className="px-20 py-10">
+                    <TextHTML text={lan === "es" ? dataImages[7].text : dataImages[7].text_eng} />
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -163,6 +228,25 @@ const Post = () => {
               <TextHTML text={data[0].text3} />
             </div>
           )}
+
+          <div className="grid grid-cols-2">
+            {dataImages.map((item, index) => {
+              if (index > 7) {
+                return (
+                  <div key={index}>
+                    <div className="aspect-square object-cover">
+                      <ImageComponent src={item.image} alt={data[0].title} />
+                    </div>
+                    {item.text && (
+                      <div className="px-20 py-10">
+                        <TextHTML text={lan === "es" ? item.text : item.text_eng} />
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+            })}
+          </div>
         </section>
       </main>
 

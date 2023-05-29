@@ -18,8 +18,8 @@ const Contacto = () => {
             </div>
             <div className="flex gap-3">
               <img src={instagramIcon} />
-              <a href="https://instagram.com/estudiofeo" target="_blank" rel="noopener noreferrer" className="hover:line-through">
-                @estudiofeo
+              <a href="https://instagram.com/estudio.feo" target="_blank" rel="noopener noreferrer" className="hover:line-through">
+                @estudio.feo
               </a>
               |
               <a href="https://instagram.com/tienda.feo" target="_blank" rel="noopener noreferrer" className="hover:line-through">
@@ -32,8 +32,8 @@ const Contacto = () => {
             </div>
             <div className="flex gap-3">
               <img src={behanceIcon} />
-              <a href="https://behance.net/estudiofeo" target="_blank" rel="noopener noreferrer" className="hover:line-through">
-                behance.net/estudiofeo
+              <a href="https://www.behance.net/estudio_feo" target="_blank" rel="noopener noreferrer" className="hover:line-through">
+                behance.net/estudio_feo
               </a>
             </div>
             <div className="mb-6 mt-6">

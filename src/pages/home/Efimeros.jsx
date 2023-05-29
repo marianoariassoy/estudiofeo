@@ -1,17 +1,23 @@
-import Item from "./Item";
+import { useEffect } from "react";
 import { useDataContext } from "../../context/lanContext";
+import Item from "./Item";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
+import GsapLogo from "../../utils/GsapLogo";
 
 const Efimeros = () => {
   const { lan } = useDataContext();
   const { data, loading } = useFetch(`/efimeros/${lan}`);
 
+  useEffect(() => {
+    GsapLogo(".data-hidden-efimeros");
+  }, []);
+
   return (
     <section className="px-16 py-28 bg-secondary" id="efimeros">
-      <div className="mb-20">
+      <div className="data-hidden-efimeros mb-20">
         <h1 className="font-bold text-6xl">
-          {lan === "es" ? "efímeros" : "ephemeral"} <span className="font-extraitalic">&feos</span>
+          {lan === "es" ? "efímeros" : "ephemeral"} <span className="font-extraitalic">& feos</span>
         </h1>
       </div>
 

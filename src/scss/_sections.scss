@@ -87,9 +87,14 @@
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
+  min-height: 330px;
   .items-container {
     display: inline-block;
   }
+}
+
+.galeria-container {
+  min-height: 330px;
 }
 
 .px-16 {

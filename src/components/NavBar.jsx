@@ -2,9 +2,13 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useDataContext } from "../context/lanContext";
+
 import Menu from "./Menu";
 
 const NavBar = () => {
+  const { lan, setLan } = useDataContext();
+
   useEffect(() => {
     gsap.registerPlugin(ScrollToPlugin);
     gsap.registerPlugin(ScrollTrigger);
@@ -50,10 +54,21 @@ const NavBar = () => {
           </a>
         </div>
 
-        <div id="nav-menu" className="menu-main" onClick={OpenMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className="flex gap-4">
+          {lan === "es" ? (
+            <button className="font-bold hover:opacity-70 cursor-pointer" onClick={() => setLan("en")}>
+              EN
+            </button>
+          ) : (
+            <button className="font-bold hover:opacity-70 cursor-pointer" onClick={() => setLan("es")}>
+              ES
+            </button>
+          )}
+          <div id="nav-menu" className="menu-main" onClick={OpenMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
 

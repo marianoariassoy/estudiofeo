@@ -1,15 +1,21 @@
-import Item from "./Item";
+import { useEffect } from "react";
 import { useDataContext } from "../../context/lanContext";
+import Item from "./Item";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
+import GsapLogo from "../../utils/GsapLogo";
 
 const Muebles = () => {
   const { lan } = useDataContext();
   const { data, loading } = useFetch(`/muebles/${lan}`);
 
+  useEffect(() => {
+    GsapLogo(".data-hidden-muebles");
+  }, []);
+
   return (
     <section className="px-16 pt-28 bg-secondary" id="muebles">
-      <div className="mb-20">
+      <div className="data-hidden-muebles mb-20">
         <h1 className="font-bold text-6xl">
           {lan === "es" ? "muebles" : "forniture"} <span className="font-extraitalic">feos</span>
         </h1>

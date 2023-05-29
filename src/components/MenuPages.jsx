@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useDataContext } from "../context/lanContext";
 
 const MenuPages = () => {
-  const { lan, setLan } = useDataContext();
+  const { lan } = useDataContext();
 
   const menuItems = [
     {
@@ -45,16 +45,6 @@ const MenuPages = () => {
 
   return (
     <div className="nav bg-white absolute px-16 w-full h-screen -z-10">
-      {lan === "es" ? (
-        <button className="font-bold absolute left-16 bottom-20 mt-1 hover:opacity-70 cursor-pointer z-50" onClick={() => setLan("en")}>
-          ENGLISH
-        </button>
-      ) : (
-        <button className="font-bold absolute left-16 bottom-20 mt-1 hover:opacity-70 cursor-pointer z-50" onClick={() => setLan("es")}>
-          ESPAÑOL
-        </button>
-      )}
-
       <nav className="flex items-center h-full">
         <ul className="text-5xl lg:text-7xl font-extra">
           {menuItems.map((item) => (

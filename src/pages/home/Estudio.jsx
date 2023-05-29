@@ -6,26 +6,28 @@ import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
 import TextHTML from "../../hooks/useHTML";
 import GsapHeader from "../../utils/GsapHeader";
+import GsapLogo from "../../utils/GsapLogo";
 
 const Estudio = () => {
   const { lan } = useDataContext();
   const { data, loading } = useFetch(`/estudio/${lan}`);
 
   useEffect(() => {
-    GsapHeader();
+    GsapHeader(".data-light-estudio");
+    GsapLogo(".data-hidden-estudio");
   }, []);
 
   return (
     <>
       <section className="px-16 pt-28 pb-10 bg-secondary" id="estudio">
-        <div>
+        <div className="data-hidden-estudio">
           <h1 className="font-bold text-6xl">
             {lan === "es" ? "estudio" : "studio"} <span className="font-extraitalic">feo</span>
           </h1>
         </div>
       </section>
 
-      <section className="data-light-header galeria-item">
+      <section className="data-light-estudio galeria-item">
         {loading ? (
           <Loader />
         ) : (

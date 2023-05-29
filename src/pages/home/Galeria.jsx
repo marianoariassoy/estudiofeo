@@ -6,20 +6,22 @@ import useFetch from "../../hooks/useFetch";
 import TextHTML from "../../hooks/useHTML";
 import Loader from "../../components/Loader";
 import GsapHeader from "../../utils/GsapHeader";
+import GsapLogo from "../../utils/GsapLogo";
 
 const Galeria = () => {
   const { lan } = useDataContext();
   const { data, loading } = useFetch(`/galeria/${lan}`);
 
   useEffect(() => {
-    GsapHeader();
-  }, []);
+    GsapHeader(".data-light-galeria");
+    GsapLogo(".data-hidden-galeria");
+  }, [data]);
 
   return (
     <>
       <section className="px-16 pt-28 pb-10 bg-secondary" id="galeria">
         <div className="flex justify-between items-center">
-          <div>
+          <div className="data-hidden-galeria">
             <h1 className="font-bold text-6xl">
               {lan === "es" ? "galería" : "galery"} <span className="font-extraitalic">feo</span>
             </h1>
@@ -30,7 +32,7 @@ const Galeria = () => {
         </div>
       </section>
 
-      <section className="data-light-header galeria-item">
+      <section className="data-light-galeria galeria-item">
         {loading ? (
           <Loader />
         ) : (

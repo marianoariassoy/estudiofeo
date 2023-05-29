@@ -11,7 +11,7 @@ const SliderItem = ({ id, src, date, title }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    GsapHeader();
+    GsapHeader(".data-light-slider");
   }, []);
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const Slider = () => {
   };
 
   return (
-    <section className="slider-home mt-44 data-light-header" id="novedades">
+    <section className="slider-home mt-44 data-light-slider" id="novedades">
       {loading ? <Loader /> : <Slide {...properties}>{data && data.map((item) => <SliderItem key={item.id} id={item.id} src={`${imageURL}${item.image}`} date={item.date} title={item.title} />)}</Slide>}
     </section>
   );
