@@ -106,147 +106,21 @@ const Post = () => {
           </div>
         </section>
 
-        <section className="lg:absolute right-0 post-col-right">
-          {dataImages[0] && (
-            <div>
-              <div className="aspect-video object-cover">
-                <ImageComponent src={dataImages[0].image} alt={data[0].title} />
-              </div>
-              {dataImages[0].text && (
-                <div className="px-20 pt-10">
-                  <TextHTML text={lan === "es" ? dataImages[0].text : dataImages[0].text_eng} />
+        <section className="lg:absolute right-0 post-col-right flex flex-wrap">
+          {dataImages.map((item, index) => {
+            return (
+              <div key={index} className={item.square > 0 ? "w-1/2" : "w-full"}>
+                <div className={item.square > 0 ? "w-full aspect-square object-cover" : "w-full"}>
+                  <ImageComponent src={item.image} alt={data[0].title} />
                 </div>
-              )}
-            </div>
-          )}
-
-          {data[0].text && (
-            <div className="p-20">
-              <TextHTML text={data[0].text} />
-            </div>
-          )}
-
-          {dataImages[1] && (
-            <div>
-              <div className="aspect-video object-cover">
-                <ImageComponent src={dataImages[1].image} alt={data[0].title} />
-              </div>
-              {dataImages[1].text && (
-                <div className="px-20 py-20">
-                  <TextHTML text={lan === "es" ? dataImages[1].text : dataImages[1].text_eng} />
-                </div>
-              )}
-            </div>
-          )}
-
-          <div className="grid grid-cols-2">
-            {dataImages[2] && (
-              <div>
-                <div className="aspect-square object-cover">
-                  <ImageComponent src={dataImages[2].image} alt={data[0].title} />
-                </div>
-                {dataImages[2].text && (
+                {item.text && (
                   <div className="px-20 py-10">
-                    <TextHTML text={lan === "es" ? dataImages[2].text : dataImages[2].text_eng} />
+                    <TextHTML text={lan === "es" ? item.text : item.text_eng} />
                   </div>
                 )}
               </div>
-            )}
-            {dataImages[3] && (
-              <div>
-                <div className="aspect-square object-cover">
-                  <ImageComponent src={dataImages[3].image} alt={data[0].title} />
-                </div>
-                {dataImages[3].text && (
-                  <div className="px-20 py-10">
-                    <TextHTML text={lan === "es" ? dataImages[3].text : dataImages[3].text_eng} />
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-
-          {data[0].text2 && (
-            <div className="p-20">
-              <TextHTML text={data[0].text2} />
-            </div>
-          )}
-
-          <div className="grid grid-cols-2">
-            {dataImages[4] && (
-              <div>
-                <div className="aspect-square object-cover">
-                  <ImageComponent src={dataImages[4].image} alt={data[0].title} />
-                </div>
-                {dataImages[4].text && (
-                  <div className="px-20 py-10">
-                    <TextHTML text={lan === "es" ? dataImages[4].text : dataImages[4].text_eng} />
-                  </div>
-                )}
-              </div>
-            )}
-            {dataImages[5] && (
-              <div>
-                <div className="aspect-square object-cover">
-                  <ImageComponent src={dataImages[5].image} alt={data[0].title} />
-                </div>
-                {dataImages[5].text && (
-                  <div className="px-20 py-10">
-                    <TextHTML text={lan === "es" ? dataImages[5].text : dataImages[5].text_eng} />
-                  </div>
-                )}
-              </div>
-            )}
-            {dataImages[6] && (
-              <div>
-                <div className="aspect-square object-cover">
-                  <ImageComponent src={dataImages[6].image} alt={data[0].title} />
-                </div>
-                {dataImages[6].text && (
-                  <div className="px-20 py-10">
-                    <TextHTML text={lan === "es" ? dataImages[6].text : dataImages[6].text_eng} />
-                  </div>
-                )}
-              </div>
-            )}
-            {dataImages[7] && (
-              <div>
-                <div className="aspect-square object-cover">
-                  <ImageComponent src={dataImages[7].image} alt={data[0].title} />
-                </div>
-                {dataImages[7].text && (
-                  <div className="px-20 py-10">
-                    <TextHTML text={lan === "es" ? dataImages[7].text : dataImages[7].text_eng} />
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-
-          {data[0].text3 && (
-            <div className="p-20">
-              <TextHTML text={data[0].text3} />
-            </div>
-          )}
-
-          <div className="grid grid-cols-2">
-            {dataImages.map((item, index) => {
-              if (index > 7) {
-                return (
-                  <div key={index}>
-                    <div className="aspect-square object-cover">
-                      <ImageComponent src={item.image} alt={data[0].title} />
-                    </div>
-                    {item.text && (
-                      <div className="px-20 py-10">
-                        <TextHTML text={lan === "es" ? item.text : item.text_eng} />
-                      </div>
-                    )}
-                  </div>
-                );
-              }
-            })}
-          </div>
+            );
+          })}
         </section>
       </main>
 
