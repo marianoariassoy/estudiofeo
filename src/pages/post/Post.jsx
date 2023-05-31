@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
 import { useDataContext } from "../../context/lanContext";
 import Header from "../../components/Header";
 import useFetch from "../../hooks/useFetch";
@@ -14,15 +13,15 @@ import iconForward from "../../assets/images/forward.svg";
 import ImageComponent from "../../components/ImageComponent";
 
 const Post = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   let { id } = useParams();
   const { lan } = useDataContext();
-  const { data, loading, error } = useFetch(`/post/${lan}/${id}`);
+  const { data, loading } = useFetch(`/post/${lan}/${id}`);
   const { data: dataImages, loading: loadingImages } = useFetch(`/imagenes/${id}`);
   const [currentVideo, setCurrentVideo] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [data]);
 
   if (loading)
     return (

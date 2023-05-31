@@ -14,7 +14,7 @@ const Efimeros = () => {
   }, []);
 
   return (
-    <section className="px-16 py-28 bg-secondary" id="efimeros">
+    <section className="px-16 pt-28 bg-secondary" id="efimeros">
       <div className="data-hidden-efimeros mb-20">
         <h1 className="font-bold text-6xl">
           {lan === "es" ? "efímeros" : "ephemeral"} <span className="font-extraitalic">& feos</span>

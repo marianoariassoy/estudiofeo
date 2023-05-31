@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="uuid-d74fa95c-22e4-4ab5-89f5-695ee4b4617f" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="177" height="317" viewBox="0 0 177 317">
-  <g id="uuid-e67f8fb3-e2d3-45ad-afe3-3a12fd824921" data-name="Capa 1">
-    <path d="M82.6,312.7c2.3,5,7.4,5,9.7,.1L168.1,104.4c3.2-8.2,5.6-16.9,7.1-26,.7-4.2,1.2-8.4,1.2-11.8C176.5,30.1,155.4,.5,129.4,.5s-32.8,13.5-40.9,33.4C80.2,13.6,64.6,0,46.6,.5S1.3,29.5,.5,64.5c-.1,5,.2,9.9,.8,14.6,.8,6.1,2.4,11.9,4.4,17.4l76.8,216.2Z" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+<svg id="uuid-5f0ade11-9461-47aa-9f85-0f084b0f3108" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="61.4mm" height="70.9mm" viewBox="0 0 174 201">
+  <defs>
+    <style>
+      .uuid-8f53f2f3-cdd3-4d90-b68b-414f159ea295 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="uuid-590c955d-a828-40c4-a2f1-97ad03bc68c1" data-name="Capa 2">
+    <path class="uuid-8f53f2f3-cdd3-4d90-b68b-414f159ea295" d="M167.4,65.3L87,200.5,6.6,65.3C-9.9,37.5,8.8,1.2,40.5,.5c.3,0,.7,0,1,0,25.1,0,45.5,21,45.5,46.9C87,21.5,107.4,.5,132.5,.5s.7,0,1,0c31.6,.7,50.4,37,33.8,64.8Z"/>
   </g>
 </svg>

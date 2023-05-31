@@ -179,58 +179,56 @@ a {
 .item-mask {
   cursor: pointer;
   white-space: normal;
-  width: 180px;
-  height: 317px;
-  margin-right: 1.5rem;
-}
-.item-mask:hover .item-mask-main {
-  opacity: 0;
+  margin-right: 3rem;
 }
 .item-mask:hover .item-mask-image {
-  opacity: 1;
+  opacity: 0;
 }
-.item-mask:hover .item-mask-outline {
+.item-mask:hover .item-mask-txt {
   opacity: 1;
 }
 
 .mask {
-  -webkit-mask-size: 100%;
-          mask-size: 100%;
+  height: 300px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  height: 322px;
   -webkit-mask-position: top;
           mask-position: top;
 }
 
 .mask-1 {
-  -webkit-mask-image: url("/assets/mask/mask-1-on.svg");
-          mask-image: url("/assets/mask/mask-1-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-1.svg");
+          mask-image: url("/assets/mask/mask-1.svg");
 }
 
 .mask-2 {
-  -webkit-mask-image: url("/assets/mask/mask-2-on.svg");
-          mask-image: url("/assets/mask/mask-2-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-2.svg");
+          mask-image: url("/assets/mask/mask-2.svg");
 }
 
 .mask-3 {
-  -webkit-mask-image: url("/assets/mask/mask-3-on.svg");
-          mask-image: url("/assets/mask/mask-3-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-3.svg");
+          mask-image: url("/assets/mask/mask-3.svg");
 }
 
 .mask-4 {
-  -webkit-mask-image: url("/assets/mask/mask-4-on.svg");
-          mask-image: url("/assets/mask/mask-4-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-4.svg");
+          mask-image: url("/assets/mask/mask-4.svg");
 }
 
 .mask-5 {
-  -webkit-mask-image: url("/assets/mask/mask-5-on.svg");
-          mask-image: url("/assets/mask/mask-5-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-5.svg");
+          mask-image: url("/assets/mask/mask-5.svg");
 }
 
 .mask-6 {
-  -webkit-mask-image: url("/assets/mask/mask-6-on.svg");
-          mask-image: url("/assets/mask/mask-6-on.svg");
+  -webkit-mask-image: url("/assets/mask/mask-6.svg");
+          mask-image: url("/assets/mask/mask-6.svg");
 }
 
 .galeria-item {
@@ -247,6 +245,7 @@ a {
   overflow-x: auto;
   white-space: nowrap;
   min-height: 330px;
+  align-items: flex-start;
 }
 .items-container-main .items-container {
   display: inline-block;
@@ -279,4 +278,12 @@ a {
   .post-col-right {
     width: 100%;
   }
+}
+
+.item-loader {
+  height: 300px;
+}
+
+.loader-full-img {
+  min-height: 25vh;
 }/*# sourceMappingURL=main.css.map */

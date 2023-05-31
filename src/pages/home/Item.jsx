@@ -1,27 +1,35 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/lanContext";
+import BeatLoader from "react-spinners/BeatLoader";
 
 const Item = ({ data, mask }) => {
   const { imageURL } = useDataContext();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const image = new Image();
+    image.src = imageURL + data.image;
+    image.onload = () => {
+      setIsLoading(false);
+    };
+  }, [data.image]);
 
   return (
     <Link to={`/post/${data.id}`} className="item-mask items-center justify-center relative inline-flex">
-      {mask === "1" ? (
-        <div className="absolute left-0 w-full z-30 px-8">
-          <h2 className="font-bold text-xl mb-4 text-outline">{data.number}</h2>
-          <h3 className="text-xl leading-5">{data.title}</h3>
+      <div className={`item-mask-txt absolute left-0 w-full z-30 px-12 opacity-0`}>
+        <h3 className="font-bold">{data.number}</h3>
+        <h2 className="text-xl font-bold leading-5">{data.title}</h2>
+        <h3>{data.subtitle}</h3>
+      </div>
+
+      {isLoading ? (
+        <div className="item-mask-image item-loader aspect-square flex items-center justify-center">
+          <BeatLoader />
         </div>
       ) : (
-        <div className={`absolute left-0 w-full z-30 px-12 ${mask === "2" && "-mt-14"}`}>
-          <h3>{data.number}</h3>
-          <h2 className="text-xl font-bold leading-5">{data.title}</h2>
-          <h3>{data.subtitle}</h3>
-        </div>
+        <img src={`${imageURL}${data.image}`} className={`item-mask-image mask mask-${mask}`} />
       )}
-
-      <img src={`/assets/mask/mask-${mask}.svg`} className="item-mask-main absolute z-20 w-full top-0" />
-      <img src={`/assets/mask/mask-${mask}-outline.svg`} className="item-mask-outline absolute z-10 w-full opacity-0 top-0" />
-      <img src={`${imageURL}${data.image}`} className={`item-mask-image absolute top-0 h-full w-full object-cover mask mask-${mask} opacity-0`} />
     </Link>
   );
 };
