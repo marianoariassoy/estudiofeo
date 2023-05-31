@@ -25,7 +25,7 @@ const Tienda = () => {
         <div className="text-xl mb-10">{loadingTextos ? "" : lan === "es" ? dataTextos[0].text : dataTextos[0].text_eng}</div>
       </section>
 
-      <section className="galeria-container px-16 grid grid-cols-1 lg:grid-cols-4 2xl:grid-cols-5 gap-4 bg-secondary">{loading ? <Loader /> : data.map((item) => <TiendaItem key={item.id} data={item} />)}</section>
+      <section className="galeria-container px-16 grid grid-cols-1 lg:grid-cols-5 2xl:grid-cols-6 gap-4 bg-secondary">{loading ? <Loader /> : data.map((item) => <TiendaItem key={item.id} data={item} />)}</section>
     </>
   );
 };

@@ -36,7 +36,7 @@ const Item = ({ data, mask }) => {
         <h3 className="text-xl text-center font-bold">{data.title}</h3>
       </div>
 
-      <img src={`/assets/mask/mask-${mask}-outline.svg`} className="item-mask-image" />
+      <img src={`/assets/mask/mask-${mask}-outline.svg`} className="item-mask-image mask-outline" />
     </a>
   );
 };
