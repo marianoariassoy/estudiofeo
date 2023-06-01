@@ -20,10 +20,17 @@ const Estudio = () => {
   return (
     <>
       <section className="px-16 pt-28 pb-10 bg-secondary" id="estudio">
-        <div className="data-hidden-estudio">
-          <h1 className="font-bold text-6xl">
-            {lan === "es" ? "estudio" : "studio"} <span className="font-extraitalic">feo</span>
-          </h1>
+        <div className="data-hidden-estudio flex justify-between items-center">
+          <div>
+            <h1 className="font-bold text-6xl">
+              {lan === "es" ? "estudio" : "studio"} <span className="font-extraitalic">feo</span>
+            </h1>
+          </div>
+          <div>
+            <Link to="/estudio/77" className="border-2 border-black rounded-full px-4 py-1 font-bold hover:opacity-60">
+              {lan === "es" ? "VER MÁS" : "MORE"}
+            </Link>
+          </div>
         </div>
       </section>
 

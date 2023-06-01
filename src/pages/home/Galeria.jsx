@@ -11,6 +11,7 @@ import GsapLogo from "../../utils/GsapLogo";
 const Galeria = () => {
   const { lan } = useDataContext();
   const { data, loading } = useFetch(`/galeria/${lan}`);
+  const { data: dataTextos, loading: loadingTextos } = useFetch(`/post/${lan}/131`);
 
   useEffect(() => {
     GsapHeader(".data-light-galeria");
@@ -27,7 +28,9 @@ const Galeria = () => {
             </h1>
           </div>
           <div>
-            <button className="border-2 border-black rounded-full px-4 py-1 font-bold hover:opacity-60"> {lan === "es" ? " EXPOSICIONES ANTERIORES" : "PREV EXPOSITIONS"}</button>
+            <Link to="/galeria/131" className="border-2 border-black rounded-full px-4 py-1 font-bold hover:opacity-60">
+              {lan === "es" ? "VER MÁS" : "MORE"}
+            </Link>
           </div>
         </div>
       </section>
@@ -36,20 +39,24 @@ const Galeria = () => {
         {loading ? (
           <Loader />
         ) : (
-          data && (
+          data &&
+          dataTextos && (
             <article className="galeria-item grid lg:grid-cols-2">
               <div className="bg-black p-16 text-secondary flex flex-col justify-between aspect-square lg:aspect-auto">
                 <div>
-                  <h3 className="text-xl">{data[0].subtitle}</h3>
-                  <h1 className="text-6xl lg:text-7xl font-bold mb-8">{data[0].title}</h1>
+                  <Link to={`/galeria/${data[0].id}`} className="hover:opacity-80 text-secondary">
+                    <h3 className="text-xl">{data[0].subtitle}</h3>
+                    <h1 className="text-6xl lg:text-7xl font-bold mb-8">{data[0].title}</h1>
+                  </Link>
                 </div>
                 <div className="font-bold">
-                  <TextHTML text={data[0].text} />
+                  <h2 className="mb-4">{dataTextos[0].title}</h2>
+                  <TextHTML text={dataTextos[0].text} />
                 </div>
               </div>
               <div className="overflow-hidden aspect-square lg:aspect-auto">
-                <Link to={`/galeria/${data[0].id}`} className="hover:opacity-80">
-                  <ImageComponent src={`${data[0].image}`} />
+                <Link to={`/galeria/131`} className="hover:opacity-80">
+                  <ImageComponent src={`${dataTextos[0].image}`} />
                 </Link>
               </div>
             </article>
